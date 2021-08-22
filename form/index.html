@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="Bootstrap/styles/bootstrap.min.css" rel="stylesheet"/>
+    <link href="css/formStyle.css" rel="stylesheet"/>
+    <title>Товары</title>
+</head>
+<body>
+
+<div class="row">
+    <div class="col-md-4 col-md-offset-4">
+        <table class="table table-striped table-bordered table-hover table-condensed" id="products-table">
+            <thead>
+            <tr>
+                <th>Название</th>
+                <th>Стоимость, USD</th>
+                <th>Дата и время</th>
+            </tr>
+            </thead>
+            <tbody id="products-table-body">
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<div class="row" id="products-form">
+    <div class="col-md-4 col-md-offset-4">
+        <div class="panel panel-primary">
+            <div class="panel-body">
+                <div class="row">
+                    <div class="col-md-3 col-md-offset-1">
+                        <h2 class="panel-title"><b>Новый товар</b></h2>
+                    </div>
+                </div>
+                <form id="product-form">
+                <div class="row">
+                    <div class="form-group">
+                        <div class="col-md-3 col-md-offset-1">
+                            <label for="name-input">Наименование:</label>
+                        </div>
+                        <div class="col-md-7">
+                            <input type="text" name="name-input" id="name-input">
+                            <div class="help-block" id="help-block-input"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="form-group">
+                        <div class="col-md-3 col-md-offset-1">
+                            <label for="price-input">Стоимость:</label>
+                        </div>
+                        <div class="col-md-7">
+                            <input type="number" step=".01" pattern="^\d*(\.\d{0,2})?$" name="price-input" id="price-input">
+                            <div class="help-block" id="help-block-price"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="form-group">
+                        <div class="col-md-3 col-md-offset-1">
+                            <label for="date-input">Дата и время:</label>
+                        </div>
+                        <div class="col-md-7">
+                            <input type="text" name="date-input" id="date-input" placeholder="дд.мм.ггг чч:мм">
+                            <div class="help-block" id="help-block-date"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row text-right">
+                    <div class="col-md-10 col-md-offset-1">
+                        <div class="form-group">
+                            <button type="submit" class="btn btn-success" id="btn-add">Добавить</button>
+                        </div>
+                    </div>
+                </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="Bootstrap/js/jquery-1.11.1.min.js"></script>
+<script src="Bootstrap/js/bootstrap.min.js"></script>
+<script src="js/form.js"></script>
+</body>
+</html>

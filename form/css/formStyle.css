@@ -1,0 +1,22 @@
+.panel input {
+    border: none;
+    border-bottom: 1px solid dimgray;
+    width: 100%;
+}
+
+#products-table, #products-form{
+    margin-top: 20px;
+}
+
+#btn-add{
+    margin-top: 10px;
+    float: right;
+}
+
+#product-form{
+    margin-top: 20px;
+}
+
+.first-column{
+    font-weight: bold;
+}
